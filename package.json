@@ -1,0 +1,87 @@
+{
+  "name": "@myrialabs/typkit",
+  "version": "0.0.1",
+  "description": "Fast TypeScript schema validation with rich inline-compiled constraints, zero-allocation hot path, Standard Schema and JSON Schema export — a Zod/ArkType/TypeBox alternative for Node, Bun & the browser.",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./middleware": {
+      "types": "./dist/middleware/index.d.ts",
+      "import": "./dist/middleware/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "bun test",
+    "bench": "bun run build && bun bench.ts",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "bun run clean && bun run build"
+  },
+  "keywords": [
+    "validation",
+    "schema",
+    "typescript",
+    "types",
+    "standard-schema",
+    "json-schema",
+    "validator",
+    "type-inference",
+    "zod-alternative",
+    "arktype",
+    "typebox",
+    "valibot",
+    "elysia",
+    "hono",
+    "trpc",
+    "bun",
+    "browser"
+  ],
+  "author": "Myria Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myrialabs/typkit.git"
+  },
+  "homepage": "https://github.com/myrialabs/typkit#readme",
+  "bugs": {
+    "url": "https://github.com/myrialabs/typkit/issues"
+  },
+  "devDependencies": {
+    "@arktype/util": "^0.46.0",
+    "@eslint/js": "^9.31.0",
+    "@sinclair/typebox": "^0.34.0",
+    "@types/bun": "latest",
+    "@types/node": "^22.10.0",
+    "arktype": "^2.1.20",
+    "effect": "^3.17.0",
+    "elysia": "^1.4.29",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0",
+    "hono": "^4.9.0",
+    "mitata": "^1.0.34",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.37.0",
+    "valibot": "^1.1.0",
+    "zod": "^4.0.0"
+  }
+}
