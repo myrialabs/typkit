@@ -1,6 +1,6 @@
 {
   "name": "@myrialabs/typkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fast TypeScript schema validation with rich inline-compiled constraints, zero-allocation hot path, Standard Schema and JSON Schema export — a Zod/ArkType/TypeBox alternative for Node, Bun & the browser.",
   "type": "module",
   "publishConfig": {
